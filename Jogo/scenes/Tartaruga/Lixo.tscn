@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://b2n3jlfnk0h2i"]
+
+[ext_resource type="Texture2D" uid="uid://br6fpcg8bda8q" path="res://assets/sprites/canudo.png" id="2_l424g"]
+
+[sub_resource type="GDScript" id="GDScript_7ugpd"]
+script/source = "extends Node2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[node name="Lixo" type="Node2D"]
+script = SubResource("GDScript_7ugpd")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_l424g")
