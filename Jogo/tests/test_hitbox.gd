@@ -4,7 +4,7 @@ var player
 var lixo
 var double_jogo
 
-# Create a mock player that will be used in the test
+
 func before_each():
 	double_jogo = double(load("res://scenes/Tartaruga/Jogo.tscn")).instantiate()
 	player = load("res://scenes/Tartaruga/Player.tscn").instantiate()
@@ -23,8 +23,3 @@ func test_lixo_is_removed_after_collision():
 	player.get_node("Area2D").emit_signal("area_entered", lixo.get_node("Area2D"))
 	await wait_frames(2)
 	assert_false(is_instance_valid(lixo))
-
-#func after_all():
-	#double_jogo.queue_free()
-	#player.queue_free()
-	#lixo.queue_free()
