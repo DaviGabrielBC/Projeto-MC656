@@ -24,21 +24,6 @@ jobs:
           chmod +x godot/Godot_v4.3-stable_linux.x86_64
       - name: Run GUT Tests
         run: |
-          godot/Godot_v4.3-stable_linux.x86_64 --headless --no-window -s Jogo/addons/gut/gut_cmdln.gd -d -gexit
-      - name: Archive Test Results
-        if: failure()
-        uses: actions/upload-artifact@v4
-        with:
-          name: test-results
-          path: res://test-results.log
-      
-      - name: Download HTML5 export templates
-        run: |
-          wget https://downloads.tuxfamily.org/godotengine/4.3/Godot_v4.3-stable_export_templates.tpz -O templates.tpz
-          mkdir -p ~/.local/share/godot/templates/4.3.stable
-          tar -xf templates.tpz -C ~/.local/share/godot/templates/4.3.stable
-      - name: Build the project for HTML5
-        run: |
-          ./godot/Godot_v4.3-stable_linux_headless.64 --export "HTML5" build/index.html
-        env:
-          DISPLAY: ":99"
+          cd Jogo
+          godot -d -s --path "$PWD" addons/gut/gut_cmdln.gd > gut_test_results.log
+          cd ..
