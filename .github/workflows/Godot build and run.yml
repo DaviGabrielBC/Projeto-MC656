@@ -22,11 +22,10 @@ jobs:
           wget https://github.com/godotengine/godot/releases/download/4.3-stable/Godot_v4.3-stable_linux.x86_64.zip -O godot.zip
           unzip godot.zip -d godot
           chmod +x godot/Godot_v4.3-stable_linux.x86_64
-          godot --Version
+          ls
+          /usr/local/bin/godot --Version
       - name: Run GUT Tests
         run: |
-          ls
           cd Jogo
-          godot --Version
           godot -s addons/gut/gut_cmdln.gd -d --path "$PWD" -gdir=res://test/unit > gut_test_results.log
           cd ..
