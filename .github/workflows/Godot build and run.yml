@@ -24,7 +24,6 @@ jobs:
           chmod +x godot/Godot_v4.3-stable_linux.x86_64
       - name: Run GUT Tests
         run: |
-          pwd
           cd Jogo
-          godot -s addons/gut/gut_cmdln.gd -d --path "$PWD" -gdir=res://test/unit > gut_test_results.log
+          /home/runner/work/Projeto-MC656/Projeto-MC656/godot -s addons/gut/gut_cmdln.gd -d --path "$PWD" -gdir=res://tests > gut_test_results.log
           cd ..
