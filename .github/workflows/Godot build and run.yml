@@ -19,7 +19,8 @@ jobs:
         uses: actions/checkout@v4
       - name: Download Godot
         run: |
-          wget https://github.com/godotengine/godot/releases/download/4.3-stable/Godot_v4.3-stable_linux.x86_64.zip -d godot
+          wget https://github.com/godotengine/godot/releases/download/4.3-stable/Godot_v4.3-stable_linux.x86_64.zip -O godot.zip
+          unzip godot.zip -d godot
           chmod +x godot/Godot_v4.3-stable_linux.x86_64
       - name: Run GUT Tests
         run: |
