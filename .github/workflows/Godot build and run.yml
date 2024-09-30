@@ -25,5 +25,5 @@ jobs:
       - name: Run GUT Tests
         run: |
           cd Jogo
-          /home/runner/work/Projeto-MC656/godot -s addons/gut/gut_cmdln.gd -d --path "$PWD" -gdir=res://tests > gut_test_results.log
+          ../godot -s addons/gut/gut_cmdln.gd -d --path "$PWD" -gdir=res://tests > gut_test_results.log
           cd ..
