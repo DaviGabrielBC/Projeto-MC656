@@ -20,7 +20,7 @@ jobs:
       - name: Download Godot
         run: |
           wget https://github.com/godotengine/godot/releases/download/4.3-stable/Godot_v4.3-stable_linux.x86_64.zip -d godot
-          chmod +x godot/Godot_v4.3-stable_mono_linux_headless.64
+          chmod +x godot/Godot_v4.3-stable_linux.x86_64
       - name: Run GUT Tests
         run: |
           godot/Godot_v4.3-stable_mono_linux_headless.64 --headless --no-window -s Jogo/addons/gut/gut_cmdln.gd -d -gexit
