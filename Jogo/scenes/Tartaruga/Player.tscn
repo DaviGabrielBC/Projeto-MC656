@@ -3,9 +3,8 @@
 [ext_resource type="Script" path="res://scripts/Player.gd" id="1_8jhdh"]
 [ext_resource type="Texture2D" uid="uid://dwa2e4k0f324f" path="res://assets/sprites/tartaruga.png" id="2_4lelk"]
 
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5opj0"]
-size = Vector2(333.5, 191)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gg37u"]
+size = Vector2(339, 205)
 
 [node name="Player" type="Node2D"]
 position = Vector2(50, 480)
@@ -13,11 +12,9 @@ position = Vector2(50, 480)
 [node name="Area2D" type="Area2D" parent="."]
 script = ExtResource("1_8jhdh")
 
-
 [node name="Sprite2D" type="Sprite2D" parent="Area2D"]
 texture = ExtResource("2_4lelk")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(0.5, -2.5)
 shape = SubResource("RectangleShape2D_gg37u")
-
