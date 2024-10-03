@@ -4,6 +4,7 @@ extends Area2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	position.x = get_viewport().get_visible_rect().size.x / 2
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -20,7 +21,7 @@ func _process(delta: float) -> void:
 	
 	var visible_rect = get_viewport().get_visible_rect()
 	position += velocity * delta
-	position.x = clamp(position.x, visible_rect.position.x+105, visible_rect.position.x + visible_rect.size.x-230)
+	position.x = clamp(position.x, visible_rect.position.x+106, visible_rect.position.x + visible_rect.size.x-232)
 	position.y = clamp(position.y, visible_rect.position.y, visible_rect.position.y + visible_rect.size.y)
 	#position.x = clamp(position.x, 0, screen_size.x)
 	#position.y = clamp(position.y, 0, screen_size.y)

@@ -32,9 +32,9 @@ script = ExtResource("2_jmjic")
 motion_mirroring = Vector2(200, 200)
 
 [node name="Sprite2D" type="TextureRect" parent="CanvasLayer/ParallaxBackground/Backgorund"]
-offset_left = -220.0
-offset_top = -633.0
-offset_right = 420.0
-offset_bottom = 7.0
+offset_left = -6.00002
+offset_top = 4.0
+offset_right = 634.0
+offset_bottom = 644.0
 scale = Vector2(3.5, 2.607)
 texture = ExtResource("2_a6eal")
