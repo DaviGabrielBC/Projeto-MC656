@@ -7,7 +7,7 @@
 size = Vector2(339, 205)
 
 [node name="Player" type="Node2D"]
-position = Vector2(0, 420)
+position = Vector2(50, 480)
 
 [node name="Area2D" type="Area2D" parent="."]
 script = ExtResource("1_8jhdh")

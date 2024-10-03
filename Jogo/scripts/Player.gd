@@ -9,7 +9,6 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	var velocity = Vector2.ZERO # The player's movement vector.
-	velocity.x = 0            ## Constant player movement
 	
 	##Player Movement change
 	if Input.is_action_pressed("move_right"): 
@@ -17,9 +16,11 @@ func _process(delta: float) -> void:
 	if Input.is_action_pressed("move_left"):
 		velocity.x -= 1
 	if velocity.length() > 0 :
-		velocity = velocity.normalized() * speed
+		velocity *= speed
 	
 	position += velocity * delta
-	position = position.clamp(Vector2.ZERO, get_viewport_rect().size)
+	position = position.clamp(Vector2.ZERO, get_viewport().get_visible_rect().size)
+	#position.x = clamp(position.x, 0, screen_size.x)
+	#position.y = clamp(position.y, 0, screen_size.y)
 	
 	pass
