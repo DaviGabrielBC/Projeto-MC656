@@ -8,12 +8,12 @@ func before_each():
 	# Create new instances of the Jogo scene before each test
 	jogo = JogoScene.instantiate()
 	double_jogo = partial_double(JogoScene).instantiate()
+	
+	add_child(jogo)
+	add_child(double_jogo)
 
 # Test if the player takes damage correctly
 func test_player_takes_damage():
-	# Set initial health
-	jogo.player_hp = 3
-	
 	# Call the take_damage function with 2 damage
 	jogo.take_damage(2)
 	
@@ -22,9 +22,6 @@ func test_player_takes_damage():
 	
 # Test if the player hp doesn't gets below zero when they die
 func test_hp_not_below_zero():
-	# Set initial health
-	jogo.player_hp = 3
-	
 	# Call the take_damage function with 8 damage
 	jogo.take_damage(8)
 	
@@ -33,9 +30,6 @@ func test_hp_not_below_zero():
 
 # Test if the player dies when takes lethal damage
 func test_player_dies():
-	# Set health 
-	double_jogo.player_hp = 3
-	
 	# Call the take_damage function with lethal damage
 	double_jogo.take_damage(5)
 	
@@ -44,10 +38,6 @@ func test_player_dies():
 	
 # Test if the HP label shows health correctly
 func test_HP_label():
-	# Set player hp 
-	jogo.player_hp = 3
-	jogo.get_node("Hp_label").text = "HP: 3/3"
-	
 	# Call the take_damage function with 1 damage
 	jogo.take_damage()
 	
