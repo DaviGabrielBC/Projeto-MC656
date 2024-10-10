@@ -11,3 +11,7 @@ position = Vector2(400, 280)
 
 [node name="Sprite2D" type="Sprite2D" parent="Backgorund"]
 texture = ExtResource("2_a6eal")
+
+[node name="Hp_label" type="Label" parent="."]
+offset_right = 115.0
+offset_bottom = 47.0
