@@ -1,9 +1,17 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=5 format=3 uid="uid://ba0kr0ad54niu"]
 
 [ext_resource type="Script" path="res://scripts/Jogo da Tartaruga.gd" id="1_1u5cp"]
 [ext_resource type="Texture2D" uid="uid://tpf6ahgoeswp" path="res://assets/sprites/sea background.png" id="2_a6eal"]
 [ext_resource type="Script" path="res://scripts/parallax_background.gd" id="2_jmjic"]
 [ext_resource type="PackedScene" uid="uid://bocxcaxg1cxr1" path="res://scenes/Tartaruga/Player.tscn" id="4_sd15p"]
+=======
+[gd_scene load_steps=4 format=3 uid="uid://ba0kr0ad54niu"]
+
+[ext_resource type="Script" path="res://scripts/Jogo da Tartaruga.gd" id="1_1u5cp"]
+[ext_resource type="Texture2D" uid="uid://tpf6ahgoeswp" path="res://assets/sprites/sea background.png" id="2_a6eal"]
+[ext_resource type="PackedScene" uid="uid://bocxcaxg1cxr1" path="res://scenes/Tartaruga/Player.tscn" id="3_dbeim"]
+>>>>>>> Stashed changes
 
 [node name="Jogo" type="Node2D"]
 position = Vector2(-79, 41)
@@ -11,6 +19,7 @@ script = ExtResource("1_1u5cp")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
+<<<<<<< Updated upstream
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
 anchors_preset = 2
 anchor_top = 1.0
@@ -37,4 +46,10 @@ offset_top = 4.0
 offset_right = 634.0
 offset_bottom = 644.0
 scale = Vector2(3.5, 2.607)
+=======
+[node name="Sprite2D" type="Sprite2D" parent="Backgorund"]
+scale = Vector2(2, 2)
+>>>>>>> Stashed changes
 texture = ExtResource("2_a6eal")
+
+[node name="Player" parent="." instance=ExtResource("3_dbeim")]
